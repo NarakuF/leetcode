@@ -1,5 +1,5 @@
 /**
- * Greedy algorithm: two pointers
+ * Greedy Algorithm: two pointers
  */
 class Solution {
   public boolean isSubsequence(String s, String t) {
@@ -25,7 +25,7 @@ class Solution {
 }
 
 /**
- * Dynamic programming
+ * Dynamic Programming
  */
 class Solution {
   public boolean isSubsequence(String s, String t) {
@@ -36,7 +36,7 @@ class Solution {
       int m = s.length();
       int n = t.length();
 
-      // dp[i][j] = if s[:i] is subsequence of t[:j] (exclusive)?
+      // dp[i][j] = if s.substring(0, i) is subsequence of t.substring(0, j)
       boolean[][] dp = new boolean[m + 1][n + 1];
 
       for (int i = 0; i < n + 1; i++) {
@@ -57,7 +57,7 @@ class Solution {
  * and you want to check one by one to see if T has its subsequence.
  * In this scenario, how would you change your code?
  * 
- * Binary search
+ * Binary Search
  */
 class Solution {
   public boolean isSubsequence(String s, String t) {
@@ -65,7 +65,7 @@ class Solution {
           return true;
       }
       
-      // precomputation, build the HashMap for t
+      // pre-computation, build the HashMap for t
       Map<Character, List<Integer>> map = new HashMap<>();
       for (int i = 0; i < t.length(); i++) {
         char c = t.charAt(i);

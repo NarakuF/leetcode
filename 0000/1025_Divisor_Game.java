@@ -1,5 +1,5 @@
 /**
- * Dynamic programming
+ * Dynamic Programming
  */
 class Solution {
     public boolean divisorGame(int N) {
